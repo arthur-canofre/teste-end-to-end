@@ -2,8 +2,9 @@ function cadastro(){
     const nome = document.getElementById("nome").value
     const senha = document.getElementById("senha").value
     const senha2 = document.getElementById("senha2").value
+    const email = document.getElementById("email").value
 
-    if (nome === "" || senha === "" || senha2 === ""){
+    if (nome === "" || senha === "" || senha2 === "" || email === ""){
         event.preventDefault()
         document.getElementById("error").innerHTML = "Todos os campos devem ser preenchidos"
         document.getElementById("error").style.display = "block"

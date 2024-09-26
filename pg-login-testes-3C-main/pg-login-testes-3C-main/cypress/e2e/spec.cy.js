@@ -43,6 +43,7 @@ describe('pagina de cadastro', () => {
   it('campos vazios', () => {
     cy.visit('http://127.0.0.1:5500/pg-login-testes-3C-main/pg-login-testes-3C-main/cadastro.html?');
     
+    cy.get('#nome').type('Pedrinho')
     cy.get('#senha').type('Senha_123')
     cy.get('#senha2').type('Senha_123')
     cy.get('#botao').click()
@@ -54,6 +55,7 @@ describe('pagina de cadastro', () => {
     cy.visit('http://127.0.0.1:5500/pg-login-testes-3C-main/pg-login-testes-3C-main/cadastro.html?');
     
     cy.get('#nome').type('Pedro')
+    cy.get('#email').type('Pedro@gmail.com')
     cy.get('#senha').type('Senha_123')
     cy.get('#senha2').type('Senha_1234')
     cy.get('#botao').click()
